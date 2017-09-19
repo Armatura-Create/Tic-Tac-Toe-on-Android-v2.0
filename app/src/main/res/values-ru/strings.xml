@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Крестики-Нолики</string>
+    <string name="main_menu">Главное Меню</string>
+    <string name="about">Помощь</string>
+    <string name="with_player">Игроком</string>
+    <string name="with_android">Андроидом</string>
+    <string name="new_game">Новая Игра</string>
+    <string name="about_text"></string>
+    <string name="text_menu">Играть с:</string>
+    <string name="logo">КРЕСТИКИ НОЛИКИ</string>
+    <string name="score">СЧЕТ:</string>
+</resources>

@@ -9,7 +9,7 @@ import android.widget.TableRow;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    public int sizeField = 5;
+    public int sizeField = 3;
     private Button[][] buttons = new Button[sizeField][sizeField];
     private Game game;
     private TableLayout layout;
@@ -17,12 +17,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);layout = (TableLayout) findViewById(R.id.main_l);
+        setContentView(R.layout.game_field);
+        layout = (TableLayout) findViewById(R.id.main_l);
         buildGameField();
     }
 
     public MainActivity() {
-        game = new Game();
+        game = new Game(sizeField);
         game.start();
     }
 

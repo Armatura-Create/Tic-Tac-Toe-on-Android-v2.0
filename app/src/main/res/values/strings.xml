@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Tic-Tac_Toe v2.0</string>
+    <string name="app_name">Tic-Tac-Toe</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="about">About</string>
+    <string name="with_player">Player</string>
+    <string name="with_android">Android</string>
+    <string name="new_game">New Game</string>
+    <string name="about_text"></string>
+    <string name="text_menu">Play to with:</string>
+    <string name="logo">TIC-TAC-TOE</string>
+    <string name="score">SCORE:</string>
 </resources>
