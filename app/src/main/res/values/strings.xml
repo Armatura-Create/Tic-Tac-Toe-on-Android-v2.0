@@ -9,4 +9,16 @@
     <string name="text_menu">Play to with:</string>
     <string name="logo">TIC-TAC-TOE</string>
     <string name="score">SCORE:</string>
+    <string name="go_game">Play</string>
+    <string name="player_android">Android</string>
+    <string name="draw">Draw</string>
+    <string name="firstPlayer">First Player</string>
+    <string name="secondPlayer">Second Player</string>
+    <string name="error_name">Please Enter Name Players</string>
+    <string name="field_3x3">Field 3x3</string>
+    <string name="field_4x4">Field 4x4</string>
+    <string name="field_5x5">Field 5x5</string>
+    <string name="field_6x6">Field 6x6</string>
+    <string name="byScrender">by ScrEnDeR</string>
+    <string name="error_field">Please select the size of the field</string>
 </resources>

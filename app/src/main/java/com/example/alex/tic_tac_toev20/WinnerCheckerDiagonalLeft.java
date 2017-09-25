@@ -18,7 +18,7 @@ class WinnerCheckerDiagonalLeft implements WinnerCheckerInterface {
             if (currPlayer != null) {
                 if (lastPlayer == currPlayer) {
                     successCounter++;
-                    if (successCounter == len) {
+                    if (successCounter == field.length) {
                         return currPlayer;
                     }
                 }

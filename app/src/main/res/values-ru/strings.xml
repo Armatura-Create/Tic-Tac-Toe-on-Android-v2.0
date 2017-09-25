@@ -9,4 +9,14 @@
     <string name="text_menu">Играть с:</string>
     <string name="logo">КРЕСТИКИ НОЛИКИ</string>
     <string name="score">СЧЕТ:</string>
+    <string name="go_game">Играть</string>
+    <string name="player_android">Андроид</string>
+    <string name="firstPlayer">Первый Игрок</string>
+    <string name="secondPlayer">Второй Игрок</string>
+    <string name="error_name">Введите имя игроков</string>
+    <string name="field_3x3">Поле 3x3</string>
+    <string name="field_4x4">Поле 4x4</string>
+    <string name="field_5x5">Поле 5x5</string>
+    <string name="field_6x6">Поле 6x6</string>
+    <string name="error_field">Пожалуйста выберете размер поля</string>
 </resources>

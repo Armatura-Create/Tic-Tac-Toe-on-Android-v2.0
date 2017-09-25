@@ -12,14 +12,14 @@ class WinnerCheckerHorizontal implements WinnerCheckerInterface {;
         Square[][] field = game.getField();
         Player currPlayer;
         Player lastPlayer = null;
-        for (int i = 0, len = field.length; i < len; i++) {
+        for (int i = 0; i<  field.length; i++) {
             lastPlayer = null;
             int successCounter = 1;
-            for (int j = 0, len2 = field[i].length; j < len2; j++) {
+            for (int j = 0; j < field[i].length; j++) {
                 currPlayer = field[i][j].getPlayer();
-                if (currPlayer == lastPlayer && (currPlayer != null && lastPlayer !=null)) {
+                if (currPlayer == lastPlayer && currPlayer != null) {
                     successCounter++;
-                    if (successCounter == len2) {
+                    if (successCounter == field.length) {
                         return currPlayer;
                     }
                 }

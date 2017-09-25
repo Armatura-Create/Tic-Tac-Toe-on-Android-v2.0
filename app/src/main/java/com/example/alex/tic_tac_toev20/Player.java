@@ -10,4 +10,5 @@ class Player {
     CharSequence getName() {
         return name;
     }
+
 }

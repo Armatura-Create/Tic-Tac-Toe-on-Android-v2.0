@@ -8,7 +8,7 @@
     android:background="@color/background_layout">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bt_withPlayer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -19,13 +19,13 @@
         android:background="@color/background_bt"
         android:text="@string/with_player"
         android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/bt_withAndroid"
         app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintLeft_toLeftOf="@+id/guideline4"
         app:layout_constraintRight_toLeftOf="@+id/guideline5"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/bt_withAndroid"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -41,10 +41,11 @@
         app:layout_constraintLeft_toLeftOf="@+id/guideline4"
         app:layout_constraintRight_toLeftOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.501"/>
+        app:layout_constraintVertical_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.0"/>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/bt_about"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -55,10 +56,10 @@
         android:background="@color/background_bt"
         android:text="@string/about"
         android:textColor="@android:color/background_light"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@+id/guideline4"
         app:layout_constraintRight_toLeftOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.0"/>
+        app:layout_constraintTop_toBottomOf="@+id/bt_withAndroid"/>
 
     <TextView
         android:id="@+id/tv_mainText"
@@ -69,7 +70,7 @@
         android:layout_marginRight="8dp"
         android:text="@string/text_menu"
         android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/bt_withPlayer"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 
@@ -100,4 +101,18 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.75"/>
+
+    <TextView
+        android:id="@+id/tv_by"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/byScrender"
+        android:textColor="@android:color/holo_orange_light"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline4"
+        app:layout_constraintRight_toLeftOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/bt_about"/>
 </android.support.constraint.ConstraintLayout>

@@ -3,9 +3,10 @@ package com.example.alex.tic_tac_toev20;
 
 class Game {
     /**
-     * Размер игрового поля
+     * Счет игроков
      */
-    private final int sizeField;
+    int scoreFirstPlayer;
+    int scoreSecondPlayer;
     /**
      * игроки
      */
@@ -32,10 +33,11 @@ class Game {
      */
     private WinnerCheckerInterface[] winnerCheckers;
 
-    Game(int sizeField){
-        this.sizeField = sizeField;
+    Game(int sizeField) {
         field = new Square[sizeField][sizeField];
         squareCount = 0;
+        scoreFirstPlayer = 0;
+        scoreSecondPlayer = 0;
 
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field[i].length; j++) {
@@ -117,8 +119,12 @@ class Game {
         }
         return null;
     }
-
-    public int getSizeField() {
-        return sizeField;
+    public Player getPlayerFirst(){
+        return players[0];
     }
+
+    public Player getPlayerSecond(){
+        return players[1];
+    }
+
 }

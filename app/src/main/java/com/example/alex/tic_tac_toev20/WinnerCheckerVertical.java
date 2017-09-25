@@ -1,15 +1,12 @@
 package com.example.alex.tic_tac_toev20;
 
-/**
- * Created by alex on 18.09.17.
- */
-
 class WinnerCheckerVertical implements WinnerCheckerInterface {
     private Game game;
 
-    public WinnerCheckerVertical (Game game) {
+    public WinnerCheckerVertical(Game game) {
         this.game = game;
     }
+
     public Player checkWinner() {
         Square[][] field = game.getField();
         Player currPlayer;
@@ -17,11 +14,11 @@ class WinnerCheckerVertical implements WinnerCheckerInterface {
         for (int i = 0, len = field.length; i < len; i++) {
             lastPlayer = null;
             int successCounter = 1;
-            for (int j = 0, len2 = field[i].length; j < len2; j++) {
+            for (int j = 0; j < field[i].length; j++) {
                 currPlayer = field[j][i].getPlayer();
-                if (currPlayer == lastPlayer && (currPlayer != null && lastPlayer !=null)) {
+                if (currPlayer == lastPlayer && currPlayer != null) {
                     successCounter++;
-                    if (successCounter == len2) {
+                    if (successCounter == field.length) {
                         return currPlayer;
                     }
                 }
