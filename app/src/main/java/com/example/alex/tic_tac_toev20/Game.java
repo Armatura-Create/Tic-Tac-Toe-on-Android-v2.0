@@ -1,12 +1,23 @@
 package com.example.alex.tic_tac_toev20;
 
 
+import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.widget.Button;
+
+import static com.example.alex.tic_tac_toev20.R.drawable.background_bt_win;
+
 class Game {
     /**
      * Счет игроков
      */
     int scoreFirstPlayer;
     int scoreSecondPlayer;
+    /**
+     * Счет игры
+     */
+    int scoreAllGames;
+    int scoreAllDraws;
     /**
      * игроки
      */
@@ -31,13 +42,18 @@ class Game {
     /**
      * Проверка на победную комбинацию
      */
-    private WinnerCheckerInterface[] winnerCheckers;
+    private WinnerCheckerInterface[] mWinnerCheckers;
 
-    Game(int sizeField) {
+    Button[][] buttons;
+
+    Game(int sizeField, Button[][] buttons) {
+        this.buttons = buttons;
         field = new Square[sizeField][sizeField];
         squareCount = 0;
         scoreFirstPlayer = 0;
         scoreSecondPlayer = 0;
+        scoreAllGames = 0;
+        scoreAllDraws = 0;
 
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field[i].length; j++) {
@@ -49,11 +65,13 @@ class Game {
         activePlayer = null;
         filled = 0;
 
-        winnerCheckers = new WinnerCheckerInterface[4];
-        winnerCheckers[0] = new WinnerCheckerHorizontal(this);
-        winnerCheckers[1] = new WinnerCheckerVertical(this);
-        winnerCheckers[2] = new WinnerCheckerDiagonalLeft(this);
-        winnerCheckers[3] = new WinnerCheckerDiagonalRight(this);
+        mWinnerCheckers = new WinnerCheckerInterface[4];
+        mWinnerCheckers[0] = new WinnerCheckerHorizontal(this);
+        mWinnerCheckers[1] = new WinnerCheckerVertical(this);
+        mWinnerCheckers[2] = new WinnerCheckerDiagonalLeft(this);
+        mWinnerCheckers[3] = new WinnerCheckerDiagonalRight(this);
+
+
     }
 
     void start() {
@@ -111,7 +129,7 @@ class Game {
     }
 
     Player checkWinner() {
-        for (WinnerCheckerInterface winChecker : winnerCheckers) {
+        for (WinnerCheckerInterface winChecker : mWinnerCheckers) {
             Player winner = winChecker.checkWinner();
             if (winner != null) {
                 return winner;
@@ -119,12 +137,4 @@ class Game {
         }
         return null;
     }
-    public Player getPlayerFirst(){
-        return players[0];
-    }
-
-    public Player getPlayerSecond(){
-        return players[1];
-    }
-
 }

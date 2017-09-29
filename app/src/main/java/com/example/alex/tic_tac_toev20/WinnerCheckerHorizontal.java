@@ -1,7 +1,6 @@
 package com.example.alex.tic_tac_toev20;
 
-class WinnerCheckerHorizontal implements WinnerCheckerInterface {;
-
+class WinnerCheckerHorizontal implements WinnerCheckerInterface {
     private Game game;
 
     WinnerCheckerHorizontal(Game game) {
@@ -11,8 +10,8 @@ class WinnerCheckerHorizontal implements WinnerCheckerInterface {;
     public Player checkWinner() {
         Square[][] field = game.getField();
         Player currPlayer;
-        Player lastPlayer = null;
-        for (int i = 0; i<  field.length; i++) {
+        Player lastPlayer;
+        for (int i = 0; i < field.length; i++) {
             lastPlayer = null;
             int successCounter = 1;
             for (int j = 0; j < field[i].length; j++) {

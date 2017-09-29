@@ -1,6 +1,5 @@
 package com.example.alex.tic_tac_toev20;
 
-
 class WinnerCheckerDiagonalLeft implements WinnerCheckerInterface {
     private Game game;
 

@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class ChangeFieldActivity extends AppCompatActivity implements View.OnClickListener {
-    Intent game;
+    private Intent mGame;
 
     private int sizeField = 0;
 
@@ -22,15 +22,12 @@ public class ChangeFieldActivity extends AppCompatActivity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.change_field);
-        int players = getIntent().getIntExtra("Players", 0);
         findView();
         setListner();
-        if (players == 1) {
+        if (getIntent().getIntExtra("Players", 0) == 1) {
             mSecondText.setEnabled(false);
             mSecondText.setText(getString(R.string.player_android));
         }
-
-
     }
 
     private void setListner() {
@@ -53,11 +50,11 @@ public class ChangeFieldActivity extends AppCompatActivity implements View.OnCli
         switch (view.getId()) {
             case R.id.bt_goToGame:
                 if (!mFirstText.getText().toString().equals("") && !mSecondText.getText().toString().equals("") && sizeField != 0) {
-                    game = new Intent(this, GameFieldActivity.class);
-                    game.putExtra("fullNameSecond", mSecondText.getText().toString());
-                    game.putExtra("fullNameFirst", mFirstText.getText().toString());
-                    game.putExtra("sizeField", sizeField);
-                    startActivity(game);
+                    mGame = new Intent(this, GameFieldActivity.class);
+                    mGame.putExtra("fullNameSecond", mSecondText.getText().toString());
+                    mGame.putExtra("fullNameFirst", mFirstText.getText().toString());
+                    mGame.putExtra("sizeField", sizeField);
+                    startActivity(mGame);
                 } else if (sizeField == 0) {
                     Toast.makeText(getApplicationContext(), getString(R.string.error_field), Toast.LENGTH_SHORT).show();
                 } else {
@@ -66,12 +63,12 @@ public class ChangeFieldActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.rb_field_3x3:
                 sizeField = 3;
-                mIvImageField.setImageResource(R.drawable.field3x3);
+                mIvImageField.setImageResource(R.drawable.field_3x3);
                 break;
 
             case R.id.rb_field_4x4:
                 sizeField = 4;
-                mIvImageField.setImageResource(R.drawable.field4x4);
+                mIvImageField.setImageResource(R.drawable.field_4x4);
                 break;
 
 //            case R.id.rb_field_5x5:

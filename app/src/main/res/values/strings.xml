@@ -21,4 +21,6 @@
     <string name="field_6x6">Field 6x6</string>
     <string name="byScrender">by ScrEnDeR</string>
     <string name="error_field">Please select the size of the field</string>
+    <string name="all_games">All Games</string>
+    <string name="all_draws">All Draws</string>
 </resources>
